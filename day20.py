@@ -26,7 +26,7 @@ print("Enter dimension:")
 d = int(input())
 
 print("Enter number of vectors:")
-n = int(input())
+n = int(input()) #added comment
 
 x = []
 for _ in range(n):
