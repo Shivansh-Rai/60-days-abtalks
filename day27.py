@@ -10,7 +10,7 @@ def build():
         ("model", LogisticRegression())
     ])
 
-#taking input
+
 print("Enter number of samples:")
 n = int(input())
 
