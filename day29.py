@@ -1,11 +1,10 @@
 from openai import OpenAI
 
-client = OpenAI(api_key="YOUR_API_KEY")
-
+client = OpenAI(api_key=" ")
 
 def generate(p):
     r = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt5",
         messages=[{"role": "user", "content": p}]
     )
     return r.choices[0].message.content
