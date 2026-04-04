@@ -2,7 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 
-llm = ChatOpenAI(api_key="YOUR_API_KEY", model="gpt-4o-mini")
+llm = ChatOpenAI(api_key="", model="gpt-4o-mini")
 
 prompt = ChatPromptTemplate.from_template("Explain the following in simple terms:\n{input}")
 
