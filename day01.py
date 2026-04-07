@@ -24,7 +24,10 @@ def freq(w):
 
 if __name__ == "__main__":
     p = "Python is great. Python is simple and powerful. Learning Python is fun and practical."
-    st = {"is", "and", "the", "a", "an"}
+    st = {
+        "a","an","the","and","or","but","is","are","was","were",
+        "in","on","at","to","for","of","with","by","as","from"
+    }
 
     w = tokenize(p)
     w2 = remove_stop(w, st)
