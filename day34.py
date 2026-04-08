@@ -3,7 +3,7 @@ from langchain.tools import tool
 from langchain.agents import initialize_agent, AgentType
 
 
-llm = ChatOpenAI(api_key="YOUR_API_KEY", model="gpt-4o-mini")
+llm = ChatOpenAI(api_key="---hidden---", model="gpt-5o-mini")
 
 
 @tool
