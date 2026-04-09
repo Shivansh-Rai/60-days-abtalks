@@ -1,11 +1,10 @@
 from langchain_openai import ChatOpenAI
-from langchain.memory import ConversationBufferMemory
+from langchain_core.messages import HumanMessage, AIMessage
 
 
 llm = ChatOpenAI(api_key="YOUR_API_KEY", model="gpt-4o-mini")
 
-memory = ConversationBufferMemory(return_messages=True)
-
+history = []
 
 print("Chatbot started (type 'exit' to stop)")
 
@@ -15,10 +14,10 @@ while True:
     if q.lower() == "exit":
         break
     
-    memory.chat_memory.add_user_message(q)
+    history.append(HumanMessage(content=q))
     
-    r = llm.invoke(memory.chat_memory.messages)
+    r = llm.invoke(history)
     
-    memory.chat_memory.add_ai_message(r.content)
+    history.append(AIMessage(content=r.content))
     
     print("Bot:", r.content)
